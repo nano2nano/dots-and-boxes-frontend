@@ -94,7 +94,7 @@ export default {
             ) {
                 return;
             }
-            const url = "https://dqn-dots-and-boxes.herokuapp.com/step";
+            const url = process.env.VUE_APP_API_URL+'/step'
             this.waiting = true;
             axios
                 .post(url, {
@@ -141,7 +141,7 @@ export default {
         },
         wake_server() {
             this.waiting = true;
-            const url = "https://dqn-dots-and-boxes.herokuapp.com/";
+            const url = process.env.VUE_APP_API_URL;
             axios.get(url).then(() => {
                 this.waiting = false;
             });
