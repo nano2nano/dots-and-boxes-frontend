@@ -94,7 +94,7 @@ export default {
             ) {
                 return;
             }
-            const url = process.env.VUE_APP_API_URL+'/step'
+            const url = process.env.VUE_APP_API_URL + "/step";
             this.waiting = true;
             axios
                 .post(url, {
