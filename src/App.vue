@@ -149,6 +149,8 @@ export default {
     },
     created() {
         this.init_board();
+    },
+    mounted() {
         this.wake_server();
     },
 };
