@@ -1,5 +1,12 @@
 <template>
-    <img :src="content" width="50" height="50" />
+    <img
+        :src="content"
+        v-if="color == 0 && (type == 2 || type == 3)"
+        width="50"
+        height="50"
+        style="cursor: pointer"
+    />
+    <img :src="content" v-else width="50" height="50" />
 </template>
 
 <script>
